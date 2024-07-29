@@ -1,0 +1,32 @@
+[package]
+name = "date-format"
+version = "0.1.0"
+authors = ["Nick @inact1v1ty <krylov.nikita.a@gmail.com>"]
+edition = "2021"
+keywords = [
+    "date",
+    "time",
+    "i18n",
+    "l10n",
+    "intl",
+    "internationalization",
+    "localization",
+    "tr",
+    "translation",
+]
+categories = ["date-and-time", "localization", "internationalization"]
+description = "Date formating functions with localization built in."
+repository = "https://github.com/inact1v1ty/date-format"
+homepage = "https://github.com/inact1v1ty/date-format"
+documentation = "https://docs.rs/date-format"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+anyhow = "1"
+once_cell = "1.19"
+regex = "1.10"
+fancy-regex = "0.13"
+itertools = "0.13"
+
+chrono = "0.4"
