@@ -21,4 +21,19 @@ impl Locale for En {
             },
         }
     }
+
+    fn ordinal_number<'a>(&self, num: u32) -> Cow<'a, str> {
+        let rem100 = num % 100;
+        let ending = if rem100 > 20 || rem100 < 10 {
+            match rem100 % 10 {
+                1 => "st",
+                2 => "nd",
+                3 => "rd",
+                _ => "th",
+            }
+        } else {
+            "th"
+        };
+        (num.to_string() + ending).into()
+    }
 }
